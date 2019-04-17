@@ -4,8 +4,8 @@ function cls()
 	shell.run("clear")
 end
 
-function dig(deep)
-	for i = 1, tonumber(deep), 1 do
+function dig(depth)
+	for i = 1, tonumber(depth), 1 do
 		while turtle.detect() == true do
 			turtle.dig()
 			os.sleep(0.3)
@@ -33,12 +33,13 @@ function moveForward(blocks)
 		turtle.moveForward()
 	end
 
-print("Mining Job")
-print("Arg1: ", arg1, " Arg2: ", arg2)
+
 
 
 
 function main()
+	print("Mining Job")
+	print("Arg1: ", arg1, " Arg2: ", arg2)
 	for i=1, tonumber(arg1), 1 do
 		dig(arg2)
 		turtle.turnLeft()
